@@ -1,6 +1,6 @@
 require './server'
 require 'sinatra/activerecord/rake'
-require "rspec/core/rake_task"
+# require "rspec/core/rake_task"
 
 # begin
 #   RSpec::Core::RakeTask.new(:spec)
