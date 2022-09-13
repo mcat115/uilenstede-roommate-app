@@ -14,3 +14,9 @@ test:
   username: postgres
   password: Asdfdsa123Car
   host: localhost
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: uilenstede_roommate_app_production
+  username: uilenstede_roommate_app
+  password: <%= ENV['UILENSTEDE_ROOMMATE_APP_DATABASE_PASSWORD'] %>
