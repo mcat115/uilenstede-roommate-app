@@ -1,6 +1,6 @@
 class Person < ActiveRecord::Base
-  validate :name, length: {minimum: 1}
-  validate :trash_score
-  validate :clean_score
-  validate :country_team
+  validates :name, length: {minimum: 1}
+  validates :trash_score
+  validates :clean_score
+  validates :country_team
 end
