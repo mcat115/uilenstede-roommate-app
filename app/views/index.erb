@@ -1,0 +1,32 @@
+<div id="app">
+
+  <h3>
+    Report Chores
+  </h3>
+
+  <form action=<%="/chore"%> method="post">
+    <label for ="name"> Who completed this chore? (First name only)
+      <input type ="text" id="name" name="name" value=<%= @name %>>
+    </label>
+
+    <label for ="chore"> Was it taking out the trash or sweeping? (Enter "trash" or "sweeping")
+      <input type ="text" id="chore" name="chore" value=<%= @chore %>>
+    </label>
+
+    <input type="submit" value="Add">
+  </form>
+
+  <h3>
+    Report Expenses
+  </h3>
+
+  <ul>
+    <% @people.each do |p| %>
+      <li>
+        <%= p.name %>
+        <%= "Trash: #{p.trash_score}" %>
+        <%= "Sweep: #{p.clean_score}" %>
+      </li>
+    <% end%>
+  </ul>
+</div>
