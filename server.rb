@@ -7,11 +7,11 @@ set :public_folder, File.join(File.dirname(__FILE__), "public")
 
 get '/' do
   @people = Person.all
-  erb  :index
+  erb :index
 end
 
 get '*' do
-  redirect '/'
+  erb :index
 end
 
 post '/chore' do
